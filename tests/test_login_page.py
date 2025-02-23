@@ -3,7 +3,7 @@ from base.base_test import BaseTest
 
 class TestLoginPage(BaseTest):
 
-    @allure.feature("1. Login Functionality")
+    @allure.feature("Login Functionality")
     def test_correct_login(self):
         self.login_page.open()
         self.login_page.is_opened()
@@ -12,7 +12,7 @@ class TestLoginPage(BaseTest):
         self.login_page.click_submit_button()
         self.inventory_page.is_opened()
 
-    @allure.feature("1. Login Functionality")
+    @allure.feature("Login Functionality")
     def test_incorrect_login(self):
         self.login_page.open()
         self.login_page.is_opened()
@@ -23,7 +23,7 @@ class TestLoginPage(BaseTest):
         assert error_text == "Epic sadface: Username and password do not match any user in this service", \
         f"Error message is not correct, got - '{error_text}'"
 
-    @allure.feature("1. Login Functionality")
+    @allure.feature("Login Functionality")
     def test_no_login(self):
         self.login_page.open()
         self.login_page.is_opened()
@@ -33,7 +33,7 @@ class TestLoginPage(BaseTest):
         assert error_text == "Epic sadface: Username is required", \
         f"Error message is not correct, got - '{error_text}'"
 
-    @allure.feature("1. Login Functionality")
+    @allure.feature("Login Functionality")
     def test_no_password(self):
         self.login_page.open()
         self.login_page.is_opened()
